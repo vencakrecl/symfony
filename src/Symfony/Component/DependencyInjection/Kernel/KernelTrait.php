@@ -246,6 +246,11 @@ trait KernelTrait
             }
         }
 
+        // Release compiler objects before loading the runtime container.
+        unset($container);
+        gc_collect_cycles();
+        gc_mem_caches();
+
         $this->container = require $cachePath;
         $this->container->set('kernel', $this);
 

@@ -584,6 +584,39 @@ class KernelTest extends TestCase
         $this->assertFalse($kernel->warmedUp);
     }
 
+    public function testCompilerGraphIsReleasedBeforeCacheWarmup()
+    {
+        gc_collect_cycles();
+        $kernel = new CompilerLifetimeKernel();
+        $kernel->boot();
+
+        $this->assertTrue($kernel->compilerReleasedDuringWarmup);
+        $this->assertTrue($kernel->warmedUp);
+    }
+
+    public function testCachedBootDoesNotCollectUnrelatedCycles()
+    {
+        $kernel = new CompilerLifetimeKernel();
+        $kernel->boot();
+        $kernel->shutdown();
+        gc_collect_cycles();
+
+        $cycle = new \stdClass();
+        $cycle->self = $cycle;
+        $reference = \WeakReference::create($cycle);
+        unset($cycle);
+
+        try {
+            $kernel = new CompilerLifetimeKernel();
+            $kernel->boot();
+
+            $this->assertFalse($kernel->warmedUp);
+            $this->assertNotNull($reference->get());
+        } finally {
+            gc_collect_cycles();
+        }
+    }
+
     public function testServicesResetter()
     {
         $httpKernelMock = $this->getMockBuilder(HttpKernelInterface::class)
@@ -905,6 +938,34 @@ class CustomProjectDirKernel extends Kernel implements WarmableInterface
     protected function getHttpKernel(): HttpKernelInterface
     {
         return $this->httpKernel;
+    }
+}
+
+class CompilerLifetimeKernel extends CustomProjectDirKernel
+{
+    public bool $compilerReleasedDuringWarmup = false;
+
+    private \WeakReference $compilerReference;
+
+    protected function build(ContainerBuilder $container): void
+    {
+        $this->compilerReference = \WeakReference::create($container);
+        $container->addCompilerPass(new class implements CompilerPassInterface {
+            private ContainerBuilder $container;
+
+            public function process(ContainerBuilder $container): void
+            {
+                // Compiler passes can retain a back-reference to their container builder.
+                $this->container = $container;
+            }
+        });
+    }
+
+    public function warmUp(string $cacheDir, ?string $buildDir = null): array
+    {
+        $this->compilerReleasedDuringWarmup = null === $this->compilerReference->get();
+
+        return parent::warmUp($cacheDir, $buildDir);
     }
 }
 
