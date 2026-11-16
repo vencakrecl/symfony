@@ -1,0 +1,762 @@
+[
+    {
+        "variant": "baseline",
+        "sample": 1,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1234.173,
+            "peak_allocated_bytes": 143147008,
+            "rss_peak_bytes": 175144960,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636176,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374784,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 46119064,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 79904768,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "during_warmup": {
+                    "used_bytes": 113244712,
+                    "allocated_bytes": 143147008,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_boot": {
+                    "used_bytes": 46119624,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 32.978,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70565888,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670552,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "patched",
+        "sample": 1,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1215.61,
+            "peak_allocated_bytes": 141049856,
+            "rss_peak_bytes": 172163072,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636080,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374688,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 24336680,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 77807616,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "during_warmup": {
+                    "used_bytes": 91462328,
+                    "allocated_bytes": 141049856,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "after_boot": {
+                    "used_bytes": 24337240,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 32.077,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70352896,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670712,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "patched",
+        "sample": 2,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1215.647,
+            "peak_allocated_bytes": 141049856,
+            "rss_peak_bytes": 172474368,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636080,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374688,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 24336680,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 77807616,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "during_warmup": {
+                    "used_bytes": 91462328,
+                    "allocated_bytes": 141049856,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "after_boot": {
+                    "used_bytes": 24337240,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 32.751,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70483968,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670712,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "baseline",
+        "sample": 2,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1201.524,
+            "peak_allocated_bytes": 143147008,
+            "rss_peak_bytes": 175030272,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636176,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374784,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 46119064,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 79904768,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "during_warmup": {
+                    "used_bytes": 113244712,
+                    "allocated_bytes": 143147008,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_boot": {
+                    "used_bytes": 46119624,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 35.659,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70008832,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670552,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "baseline",
+        "sample": 3,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1255.402,
+            "peak_allocated_bytes": 143147008,
+            "rss_peak_bytes": 174784512,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636176,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374784,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 46119064,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 79904768,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "during_warmup": {
+                    "used_bytes": 113244712,
+                    "allocated_bytes": 143147008,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_boot": {
+                    "used_bytes": 46119624,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 32.699,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70516736,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670552,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "patched",
+        "sample": 3,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1208.851,
+            "peak_allocated_bytes": 141049856,
+            "rss_peak_bytes": 172064768,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636080,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374688,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 24336680,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 77807616,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "during_warmup": {
+                    "used_bytes": 91462328,
+                    "allocated_bytes": 141049856,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "after_boot": {
+                    "used_bytes": 24337240,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 32.733,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70467584,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670712,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "patched",
+        "sample": 4,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1224.096,
+            "peak_allocated_bytes": 141049856,
+            "rss_peak_bytes": 172146688,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636080,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374688,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 24336680,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 77807616,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "during_warmup": {
+                    "used_bytes": 91462328,
+                    "allocated_bytes": 141049856,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "after_boot": {
+                    "used_bytes": 24337240,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 32.29,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70385664,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670712,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "baseline",
+        "sample": 4,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1191.328,
+            "peak_allocated_bytes": 143147008,
+            "rss_peak_bytes": 174604288,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636176,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374784,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 46119064,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 79904768,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "during_warmup": {
+                    "used_bytes": 113244712,
+                    "allocated_bytes": 143147008,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_boot": {
+                    "used_bytes": 46119624,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 31.267,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 69992448,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670552,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "baseline",
+        "sample": 5,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1193.516,
+            "peak_allocated_bytes": 143147008,
+            "rss_peak_bytes": 175030272,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636176,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374784,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 46119064,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 79904768,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "during_warmup": {
+                    "used_bytes": 113244712,
+                    "allocated_bytes": 143147008,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_boot": {
+                    "used_bytes": 46119624,
+                    "allocated_bytes": 76021760,
+                    "peak_bytes": 143147008,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 33.352,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70352896,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670552,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    },
+    {
+        "variant": "patched",
+        "sample": 5,
+        "cold": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": true,
+            "compiler_alive_at_warmup": false,
+            "elapsed_ms": 1206.685,
+            "peak_allocated_bytes": 141049856,
+            "rss_peak_bytes": 172277760,
+            "phases": {
+                "before_dump": {
+                    "used_bytes": 27636080,
+                    "allocated_bytes": 39845888,
+                    "peak_bytes": 39845888,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "after_dump": {
+                    "used_bytes": 28374688,
+                    "allocated_bytes": 46137344,
+                    "peak_bytes": 53903360,
+                    "gc_runs": 9,
+                    "gc_collected": 9
+                },
+                "before_warmup": {
+                    "used_bytes": 24336680,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 77807616,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "during_warmup": {
+                    "used_bytes": 91462328,
+                    "allocated_bytes": 141049856,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                },
+                "after_boot": {
+                    "used_bytes": 24337240,
+                    "allocated_bytes": 73924608,
+                    "peak_bytes": 141049856,
+                    "gc_runs": 10,
+                    "gc_collected": 80649
+                }
+            }
+        },
+        "warm": {
+            "php": "8.5.12",
+            "os": "Darwin",
+            "opcache_cli": "0",
+            "services": 10000,
+            "warmup_mib": 64,
+            "scenario": "native",
+            "compiled": false,
+            "compiler_alive_at_warmup": null,
+            "elapsed_ms": 32.212,
+            "peak_allocated_bytes": 39534592,
+            "rss_peak_bytes": 70385664,
+            "phases": {
+                "after_boot": {
+                    "used_bytes": 19670712,
+                    "allocated_bytes": 35651584,
+                    "peak_bytes": 39534592,
+                    "gc_runs": 1,
+                    "gc_collected": 0
+                }
+            }
+        }
+    }
+]
